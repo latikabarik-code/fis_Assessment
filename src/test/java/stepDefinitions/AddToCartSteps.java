@@ -81,7 +81,7 @@ public class AddToCartSteps {
             int cartItemCount = Integer.parseInt(count);
             Assert.assertTrue("Cart should have at least 1 item.", cartItemCount > 0);
 
-            ReportGenerator.generateCartReport(cartItemCount);
+            ReportGenerator.generateCartReport(cartItemCount, "cart_report.xlsx");
 
         } catch (NumberFormatException e) {
             throw new AssertionError("Cart count is not a valid number: " + count);
